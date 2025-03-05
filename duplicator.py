@@ -152,9 +152,9 @@ def find_similar_rois(similarity_matrix, roi_mapping, threshold=0.95):
 def main():
     # 參數設定
     folder_list = [
-        r"/Users/vier/Downloads/cam26_20231004_0945/images"
+        r"/Image path/"
     ]
-    yolo_weights = "/Users/vier/Downloads/ppe_WithMask_WithoutNoHelmet_250124_best 2.pt"
+    yolo_weights = "/yolo_weight path/"
     threshold = 0.95
     classes = None  # 指定要偵測的類別 (None 表示全部)
     
@@ -195,7 +195,7 @@ def main():
         similar_rois_output.append(output)
 
     # 設定結果的 JSON 文件路徑
-    result_dir = "/Users/vier/Downloads/test"
+    result_dir = "/result path/"
 
     json_path = os.path.join(result_dir, "report.json")
     with open(json_path, "w", encoding="utf-8") as f:
